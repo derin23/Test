@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>Welcome to my Dice Game. Click the button below to Play!!</h1>
+<h3>Type in a how many dice you want to put in a cup</h3>
+<form th:action="@{/}" th:method="post" th:object="cup">
+<input th:field="*{amount}" type="number" placeholder="number of dice"/>
+<button type="submit">Shake Cup</button>
+</form>
+
+<p th:text="${amount}"></p>
+</body>
+</html>
